@@ -31,52 +31,61 @@
 ## 2. Especificación
     
 ### 2.1 Elementos
-    - un **lugar** se representa como
-    P<*num*>{: <*nombre*>}, donde *num*
+
+    un LUGAR se representa como
+    P<NUM>{: <NOMBRE>}, donde NUM
     es un número natural mayor a 0 que
-    sirve para identificar al *lugar*, y
-    donde *nombre* es una etiqueta que 
+    sirve para identificar al LUGAR, y
+    donde NOMBRE es una etiqueta que 
     se le puede colocar opcionalmente.
-    - una **transición** se representa
-    como T<*num*>{: <*nombre*>}, donde
-    *num* es un número mayor a 0 que
-    sirve para identificar a la *tran-
-    sición*, y donde *nombre* es una
+    
+    una TRANSICION se representa
+    como T<NUM>{: <NOMBRE>}, donde
+    NUM es un número mayor a 0 que
+    sirve para identificar a la TRAN-
+    SICION, y donde NOMBRE es una
     etiqueta que se le puede colocar
     opcionalmente.
-    - un **arco** se representa como
-    "-{peso: <*peso*>}->", donde dentro
+
+    un ARCO se representa como
+    "-{peso: <PESO>}->", donde dentro
     suyo puede específicarse el valor
-    del peso del arco, que por defecto
-    es de 1. un *arco* siempre tiene
+    del peso del ARCO, que por defecto
+    es de 1. un ARCO siempre tiene
     que estar en el medio entre un
-    *lugar* y una *transición* o
+    LUGAR y una TRANSICION o
     viceversa. si la relación es del
     primer tipo, entonces el arco
-    actuará como un *arco de entrada*
+    actuará como un ARCO DE ENTRADA
     para la *transición* de la relación.
     si es del segundo tipo, actuará 
-    como un *arco de salida*.
-    - un **token** representa un item
+    como un ARCO DE SALIDA.
+
+    un TOKEN representa un item
     cualquiera que se va moviendo por
     los lugares de la red y habilita
     o deshabilita las transiciones
     correspondientes.
+
 ### 2.2 Punto de entrada y de salida
-    - si una *transición* es la primera
+
+    si una TRANSICION es la primera
     en una cadena de relaciones entre
-    *lugares* y *transiciones*, entonces
-    esta *transición* será una **transi-
-    ción fuente** y se encargará de
+    LUGARES y TRANSICIONES, entonces
+    esta TRANSICION será una TRANSICION
+    FUENTE y se encargará de
     introducir los tokens en la red.
-    - si una *transición* es la última
+    
+    si una TRANSICION es la última
     en una cadena de relaciones entre
-    *lugares* y *transiciones*, entonces
-    esta *transición* será una **transi-
-    ción final** y se encargará de
+    LUGARES y TRANSICIONES, entonces
+    esta TRANSICION será una TRANSICION
+    FINAL y se encargará de
     eliminar los tokens de la red.
+
 ### 2.3 Limitaciones
-    - no estoy seguro como voy a hacer
+    
+    no estoy seguro como voy a hacer
     para representar el elemento de
     indeterminismo en la simulación, ni
     si lo voy a hacer dado que se sale
